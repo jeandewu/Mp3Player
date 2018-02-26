@@ -25,3 +25,7 @@ hs_err_pid*
 
 .idea
 *.iml
+.gitignore
+.idea/
+Mp3Player.iml
+src/
