@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.jeandewu.mp3player.controller.MainController">
+
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="prevButton" mnemonicParsing="false" text="Button" />
+            <ToggleButton fx:id="playButton" mnemonicParsing="false"
+                          text="ToggleButton" />
+            <Button fx:id="nextButton" mnemonicParsing="false" text="Button" />
+            <Slider fx:id="volumeSlider" />
+            <Slider fx:id="songSlider" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="contentTable" prefHeight="200.0"
+                       prefWidth="200.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="C1" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+               <menus>
+                  <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="fileMenuItem" mnemonicParsing="false"
+                                  text="Open Mp3 file" />
+                        <MenuItem fx:id="dirMenuItem" mnemonicParsing="false"
+                                  text="Open directory" />
+                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false"
+                                  text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false"
+                                  text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
