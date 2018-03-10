@@ -8,7 +8,8 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.jeandewu.mp3player.controller.MenuPaneController">
     <children>
-        <MenuBar>
+        <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <menus>
                 <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
                     <items>
