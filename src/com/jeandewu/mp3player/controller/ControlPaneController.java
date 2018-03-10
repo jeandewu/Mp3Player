@@ -4,6 +4,8 @@ package com.jeandewu.mp3player.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -11,7 +13,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
 
 public class ControlPaneController implements Initializable{
 
@@ -33,16 +34,18 @@ public class ControlPaneController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         configureButtons();
-        configureVolume();
+        configureSliders();
     }
 
-    private void configureVolume() {
-        volumeSlider.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+    private void configureSliders() {
+        volumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
-            public void handle(MouseEvent event) {
-                System.out.println("Wciśnięto przycisk na suwaku głośności");
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                System.out.println("Zmiana głośności " + newValue.doubleValue());
             }
         });
+
+        songSlider.valueProperty().addListener(x -> System.out.println("Przesunięcie piosenki"));
     }
 
     private void configureButtons() {
