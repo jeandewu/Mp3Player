@@ -7,12 +7,12 @@
 <BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.jeandewu.mp3player.controller.MainController">
    <bottom>
-      <fx:include source="ControlPane.fxml" />
+      <fx:include fx:id="controlPane" source="ControlPane.fxml" />
    </bottom>
    <center>
-      <fx:include source="ContentPane.fxml" />
+      <fx:include fx:id="contentPane"  source="ContentPane.fxml" />
    </center>
    <top>
-      <fx:include source="MenuPane.fxml" />
+      <fx:include fx:id="menuPane" source="MenuPane.fxml" />
    </top>
 </BorderPane>
