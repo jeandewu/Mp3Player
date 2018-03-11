@@ -15,6 +15,10 @@ public class Mp3Collection {
         songList.add(song);
     }
 
+    public void addSongs(ObservableList<Mp3Song> mp3Songs) {
+        songList.addAll(mp3Songs);
+    }
+
     public void clear() {
         songList.clear();
     }
